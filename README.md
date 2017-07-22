@@ -1,0 +1,2 @@
+# wealthExchangeSimulation
+封闭系统中定量财富随机流动的简单模拟器
