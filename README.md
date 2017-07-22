@@ -45,3 +45,16 @@
 		
 			ani1 = animation.FuncAnimation(fig, update, data_gen, interval=0.1, repeat=False, init_func=init)
 			ani2 = animation.FuncAnimation(fig, updateRanked, data_gen, interval=0.1, repeat=False, init_func=initRanked)
+
+## 成果展示
+
+- 开始时
+
+	![image](https://github.com/pancerZH/wealthExchangeSimulation/blob/master/image/start.png)
+	
+- 结束时
+
+	![image](https://github.com/pancerZH/wealthExchangeSimulation/blob/master/image/end.png)
+	
+仅从这一次模拟情况来看，在财富流动结束(迭代10000次)时，有1人不幸破产(资产为0)，有5人资产达到300元以上(成为大富翁)。  
+这可是完全随机的模拟，得到这样的结果真是令人惊讶。
