@@ -75,3 +75,11 @@ plt.show()
 
 moneyData.sort()
 print('min: {}, max: {}'.format(moneyData[0], moneyData[99]))
+# 展示资产上限和下限
+
+output = open('data.txt', 'a')
+for i in range(len(moneyData)):
+    output.write('{:<3} '.format(int(moneyData[i])))
+output.write('\n')
+output.close()
+# 将排序后的数据写入文件
