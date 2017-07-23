@@ -43,10 +43,12 @@ def data_gen():
 
                 moneyData[chosen_person] += exchange
 
-        yield moneyData
+        if (i+1) % stepLength == 0:
+            yield moneyData
 
 initMoney, person, times, exchange = 100, 100, 10000, 1
 # 100人，100元，10000次交换，每次交换1元
+stepLength = 100  # 图表更新的间隔迭代次数
 moneyData = np.ones(person)*initMoney
 
 color = '#9999ff'
