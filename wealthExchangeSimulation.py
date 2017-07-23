@@ -34,19 +34,19 @@ def data_gen():
     for i in range(times):
         timesText.set_text('times: %d' % (i+1))
         for j in range(person):
-            if moneyData[j] > 0:
-                moneyData[j] -= 1
+            if moneyData[j] >= exchange:
+                moneyData[j] -= exchange
 
                 chosen_person = np.random.randint(0, person)
                 while chosen_person == j:
                     chosen_person = np.random.randint(0, person)
 
-                moneyData[chosen_person] += 1
+                moneyData[chosen_person] += exchange
 
         yield moneyData
 
-initMoney, person, times = 100, 100, 10000
-# 100人，100元，10000次交换
+initMoney, person, times, exchange = 100, 100, 10000, 1
+# 100人，100元，10000次交换，每次交换1元
 moneyData = np.ones(person)*initMoney
 
 color = '#9999ff'
