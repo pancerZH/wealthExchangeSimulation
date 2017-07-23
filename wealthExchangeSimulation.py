@@ -72,3 +72,6 @@ ani1 = animation.FuncAnimation(fig, update, data_gen, interval=0.1, repeat=False
 ani2 = animation.FuncAnimation(fig, updateRanked, data_gen, interval=0.1, repeat=False, init_func=initRanked)
 
 plt.show()
+
+moneyData.sort()
+print('min: {}, max: {}'.format(moneyData[0], moneyData[99]))
