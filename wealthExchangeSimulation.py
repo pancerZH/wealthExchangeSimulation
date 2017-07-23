@@ -4,14 +4,14 @@ import numpy as np
 
 
 def init():
-    plt.subplot(211).set_ylim(-1, initMoney*3)
-    plt.subplot(211).set_xlim(-1, person)
+    plt.subplot(211).set_ylim(0, initMoney*3.5)
+    plt.subplot(211).set_xlim(0, person+1)
     return
 
 
 def initRanked():
-    plt.subplot(212).set_ylim(-1, initMoney*3)
-    plt.subplot(212).set_xlim(-1, person)
+    plt.subplot(212).set_ylim(0, initMoney*3.5)
+    plt.subplot(212).set_xlim(0, person+1)
     return
 
 
@@ -56,13 +56,13 @@ colorRanked = '#99ff99'
 
 fig = plt.figure()
 
-xdata = [[i for i in range(person)], [i for i in range(person)]]
+xdata = [[i+1 for i in range(person)], [i+1 for i in range(person)]]
 ydata = [[0 for i in range(person)], moneyData]
 plt.subplot(211)
 lines = plt.plot(xdata, ydata, lw=2, c=color)
 plt.xlabel('person')
 plt.ylabel('money')
-timesText = plt.text(-10, 340, 'times: 0')  # 左上角显示交换次数
+timesText = plt.text(-10, 380, 'times: 0')  # 左上角显示交换次数
 plt.subplot(212)
 linesRanked = plt.plot(xdata, ydata, lw=2, c=colorRanked)
 plt.xlabel('person')
